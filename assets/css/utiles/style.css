@@ -4,13 +4,8 @@
     width: 100%;
     height: 100vh;
    background: url('/assets/img/restaurant.jpeg') center/cover;
-}
-.cross{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 25%;
-    left: 80%;
+   position: relative;
+  
 }
 
 .container{
@@ -30,10 +25,8 @@ height: 300px;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     padding: 15px;
-  
     
 }
-
 
 .container h3{
     font-size: 1.65rem;
@@ -74,7 +67,6 @@ form h2{
     border-bottom: 1px solid #ccc;
     padding: 0px 10px;
 }
-
 
 .form-row button{
     color: white;
