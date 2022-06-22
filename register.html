@@ -16,9 +16,13 @@
      
     </head>
 <body>
-    <div id="app" >
-        <form  method="POST" action=" " id="register" >
-            <h2>Inscription</h2>
+    <div id="app" >  
+        <a href="#">clicker ici</a>
+        <form  method="POST" action="  " id="register" >
+          <div class="cross">
+            <a href="./index.html"></i><i class="fa-solid fa-xmark absolute"  ></i></a>
+          </div>
+            <h2>Registration</h2>
             <div class="form-row flex gap-10" id="name" >
                 <input type="text" pattern="[a-zA-Z.-]{3,12}$" name="firstname" id="firstname" placeholder="Your firstname" class="flex-1" autocomplete="on" >
                 <input type="text" pattern="[a-zA-Z.-]{3,12}$" name="lastname" id="lastname" placeholder="Your lastname" class="flex-1" autocomplete="on">
@@ -43,12 +47,14 @@
             </div>
             <div class="error" id="error-confirm-password" ></div>
              <div class="form-row flex">
-                    <button class="submit flex-1" id="btn" >S'inscrire </button>  
+                    <button class="submit flex-1" id="btn" disabled>Register </button>  
               </div>
               <div class="form-row">
                     <p class="form-info">You have an account ? if so, then <a href="./login.html">click here</a> to login.</p>
               </div>       
         </form>  
+   
+        
     </div>
   <noscript>JavaScript n'est pas activé sur votre ordinateur, merci de l'activer dans les paramètres de votre navigateur.</noscript>
     <script src="./assets/index.js/function.js/listeners.js"></script>
@@ -56,3 +62,4 @@
 </body>
 </html>
 
+²

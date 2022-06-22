@@ -17,7 +17,10 @@
 </head>
 <body>
     <div id="app" >
-        <form method="post" action=" " id="login" >
+        <form method="POST" action=" " id="login" >
+             <div class="cross">
+            <a href="./index.html"></i><i class="fa-solid fa-xmark absolute"  ></i></a>
+          </div>
             <h2>Connexion</h2>
      <div class="form-row flex " >
                 <input type="email" pattern="^[a-z0-9-_.]+@[a-z]+\.[a-z]{2,6}$" name="email" id = 'email'  placeholder="Your email.." class="flex-1" autocomplete="on">
@@ -30,7 +33,7 @@
             </div>
              <div class="error" id="error-password" ></div>
              <div class="form-row flex">
-                    <button class="submit flex-1"  id="btn">Se connecter </button>  
+                    <button class="submit flex-1"  id="btn" disabled>To connect </button>  
               </div>
               <div class="form-row">
                     <p class="form-info">You do not have an account ? if yes, then <a href="./register.html">click here</a> to register.</p>

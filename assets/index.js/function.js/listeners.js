@@ -9,7 +9,7 @@
     let email = document.forms[0] ['email'];
     let password = document.forms[0] ['password'];
     let passwordConfirm = document.forms[0] ['password-confirm'];
-
+    
 
     // Creation d'une variable Globale, un OBJET vide pour valider tous les champs valide //
     let check = {}
@@ -162,7 +162,7 @@ if (formRegister) {
         }
     }
  if (formLogin) {
-    if (Object.keys(check).length === 4) {
+    if (Object.keys(check).length === 2) {
         // boucle pour parcourir un objet "forin" //
         for (const key in check) {
                 const value = check[key]; // la valeur assocée à la clé de l'objet "check" // // Value  = true //
@@ -179,24 +179,29 @@ return false;
 // fonction qui permet de connaitre l'etat du formulaire pour l'activation du bouton // 
 // la fonction setupSubmitButton () doit etre rappeler dans chaque mes fonction check //
 let setupSubmitButton = ()=>{
-   if (checkFormValidity()) { // regarder si le formulaire est valide par la fonction // 
-    if (formRegister.elements[5]) { // récupération du boutton du formulaire et voir si il existe//
-        formRegister.elements[5].disabled = false;
-        return;
-    }   
+    if (formRegister) {
+     if (checkFormValidity()) { // regarder si le formulaire est valide par la fonction // 
+         if (formRegister.elements[5]) { // récupération du boutton du formulaire et voir si il existe//
+             formRegister.elements[5].disabled = false;
+                 return;
+    } 
+}  
     // si checkFormValidity n'est pas à  TRUE , il faut désactivé le boutton //
         formRegister.elements[5].disabled = true;
    }
-    if (checkFormValidity()) { // regarder si le formulaire est valide par la fonction // 
-    if (formLogin.elements[2]) { // récupération du boutton du formulaire et voir si il existe//
-        formLogin.elements[2].disabled = false;
-        return;
-    }   
-    // si checkFormValidity n'est pas à  TRUE , il faut désactivé le boutton //
-        formLogin.elements[2].disabled = true;
-   }
-
+    if (formLogin) {
+     if (checkFormValidity()) { // regarder si le formulaire est valide par la fonction // 
+         if (formLogin.elements[2]) { // récupération du boutton du formulaire et voir si il existe//
+             formLogin.elements[2].disabled = false;
+             return;
+    } 
+}  
+ // si checkFormValidity n'est pas à  TRUE , il faut désactivé le boutton //
+        formLogin.elements[2].disabled = true; 
+ 
+    }
 }
+  
 // Fonction qui permet d'initisier mes abondement //
 let setupListeners = () =>{
 
@@ -227,6 +232,6 @@ if (email) {
         icon.onclick = listenerFunction.toggleInputType // un evenement click sur lélémenent icon//    
     }
   
-
 }
+
 
